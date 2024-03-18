@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  artist: MyString
+  artwork_type: MyString
+  medium: MyString
+  dimensions: MyString
+  date: MyString
+  country: MyString
+  style: MyString
+  price: 1
+  gallery: one
+
+two:
+  title: MyString
+  description: MyText
+  artist: MyString
+  artwork_type: MyString
+  medium: MyString
+  dimensions: MyString
+  date: MyString
+  country: MyString
+  style: MyString
+  price: 1
+  gallery: two

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_18_013537) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_18_014359) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +26,23 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_18_013537) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "artworks", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "artist"
+    t.string "artwork_type"
+    t.string "medium"
+    t.string "dimensions"
+    t.string "date"
+    t.string "country"
+    t.string "style"
+    t.integer "price"
+    t.bigint "gallery_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gallery_id"], name: "index_artworks_on_gallery_id"
+  end
+
   create_table "galleries", force: :cascade do |t|
     t.string "topic"
     t.text "description"
@@ -33,4 +50,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_18_013537) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "artworks", "galleries"
 end
