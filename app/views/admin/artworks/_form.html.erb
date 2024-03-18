@@ -1,0 +1,76 @@
+<%= form_with(model: [:admin, admin_artwork]) do |form| %>
+  <% if admin_artwork.errors.any? %>
+    <div style="color: red" class="ms-5">
+      <h6><%= pluralize(admin_artwork.errors.count, "error") %> has impeded this Artwork from being saved:</h6>
+
+      <ul>
+        <% admin_artwork.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="border border-dark rounded mx-5 py-5 px-5">
+
+    <div class="d-flex flex-row mb-3">
+      <b class="pe-4"><%= form.label "Gallery", class: "form-label" %></b><br />
+      <%= form.collection_select :gallery_id, Gallery.order(:id), :id, :topic, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Title:", class: "form-label" %></b><br />
+      <%= form.text_field :title, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Description:", class: "form-label" %></b><br />
+      <%= form.text_area :description, size: "100x4", class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Artist:", class: "form-label" %></b><br />
+      <%= form.text_field :artist, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Artwork Type:", class: "form-label" %></b><br />
+      <%= form.text_field :artwork_type, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Medium:", class: "form-label" %></b><br />
+      <%= form.text_field :medium, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Dimensions:", class: "form-label" %></b><br />
+      <%= form.text_field :dimensions, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Date:", class: "form-label" %></b><br />
+      <%= form.text_field :date, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Country:", class: "form-label" %></b><br />
+      <%= form.text_field :country, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Style:", class: "form-label" %></b><br />
+      <%= form.text_field :style, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <b><%= form.label "Price:", class: "form-label" %></b><br />
+      <%= form.number_field :price, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="d-flex flex-row justify-content-end mt-3">
+      <%= form.submit class: 'btn btn-outline-primary py-0' %>
+    </div>
+
+  </div>
+<% end %>

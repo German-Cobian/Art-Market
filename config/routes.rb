@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :galleries
+    resources :artworks
   end
 
   root "home#index"

@@ -17,6 +17,23 @@
       <h4><%= @admin_gallery.topic %></h4>
       <p><%= @admin_gallery.description %></p>
     </div>
-    
+    <div>
+      <%= link_to "Add an Artwork", new_admin_artwork_path(gallery_id: @admin_gallery.id), class: "btn btn-outline-primary py-0" %>
+    </div>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-start">
+    <% @artworks.order('created_at DESC').each do |artwork|%>
+      <div class="album-container d-flex flex-column flex-lg-row border border-dark rounded mt-3 me-3">
+        <div class="my-3 mx-3">
+          
+          <h6><b><%= artwork.title %></b></h6>
+          <p><%= truncate artwork.description, length: 200 %></p>
+          <p class="d-flex flex-row justify-content-end">
+            <%= link_to 'More', admin_artwork_path(artwork) %>
+          </p> 
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

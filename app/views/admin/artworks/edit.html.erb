@@ -1,0 +1,10 @@
+<h3 class="mt-3 ms-5">Edita Este Elemento</h3>
+
+<%= render "form", admin_artwork: @admin_artwork %>
+
+<br>
+
+<div class="d-flex flex-row mb-3 ms-5">
+  <%= link_to "Show this Artwork", admin_artwork_path(@admin_artwork.id), class: 'me-3' %> |
+  <%= link_to "Galleries listing", admin_galleries_path, class: 'ms-3' %>
+</div>

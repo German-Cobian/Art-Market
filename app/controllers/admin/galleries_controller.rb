@@ -8,6 +8,8 @@ class Admin::GalleriesController < AdminController
 
   # GET /admin/galleries/1 or /admin/galleries/1.json
   def show
+    @admin_gallery = Gallery.find(params[:id])
+    @artworks = @admin_gallery.artworks.all
   end
 
   # GET /admin/galleries/new
