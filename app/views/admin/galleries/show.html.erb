@@ -1,0 +1,22 @@
+<p style="color: green" class="ms-5"><%= notice %></p>
+
+<div class="border border-danger rounded my-3 me-3 py-3 px-5">
+
+  <div class="d-flex flex-row justify-content-between mb-5">
+    <div class="me-5">
+      <%= link_to "<<", admin_galleries_path, class: 'link-style' %>
+    </div>
+    <div class="d-flex flex-row">
+      <%= link_to "Edit this Gallery", edit_admin_gallery_path(@admin_gallery), class: 'link-style me-3' %> |
+      <%= button_to "Delete this Gallery", admin_gallery_path(@admin_gallery.id), method: :delete, class: 'btn btn-outline-danger py-0 ms-3' %>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row justify-content-between">
+    <div class="w-75">
+      <h4><%= @admin_gallery.topic %></h4>
+      <p><%= @admin_gallery.description %></p>
+    </div>
+    
+  </div>
+</div>

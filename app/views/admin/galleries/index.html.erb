@@ -1,0 +1,24 @@
+<div class="d-flex flex-row justify-content-between mt-3 mx-5">
+  <h3>Galleries</h3>
+  <div>
+    <%= link_to "Create a Gallery", new_admin_gallery_path, class: "btn btn-outline-primary py-0" %>
+  </div>
+</div>
+
+<div class="my-5 mx-5">
+  <div class="d-flex flex-wrap justify-content-between" >
+    <% @admin_galleries.each do |gallery| %>
+      <div class="album-container border border-danger rounded mt-3 me-3 py-4 px-3">
+        <div class="d-flex flex-row justify-content-end">
+          <%= link_to ">>", admin_gallery_path(gallery.id), class: 'link-style' %>
+        </div>
+        <div>
+          <h6 class="mt-3"><%= gallery.topic %></h6>
+        </div>
+        <div class="my-3 mx-2">
+          <small><%= truncate gallery.description, lenght: 100 %></small>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

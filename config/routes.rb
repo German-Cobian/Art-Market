@@ -8,5 +8,9 @@ Rails.application.routes.draw do
 
   get "admin" => "admin#index"
 
+  namespace :admin do
+    resources :galleries
+  end
+
   root "home#index"
 end
