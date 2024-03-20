@@ -1,0 +1,36 @@
+<p style="color: green" class="ms-5"><%= notice %></p>
+
+<div class="border border-danger rounded my-5 mx-5 py-3 px-5">
+
+  <div class="mb-5 me-5">
+    <%= link_to "<<", galleries_path, class: 'link-style' %>
+  </div>
+
+  <div class="mb-5 w-75">
+    <h4><%= @gallery.topic %></h4>
+  </div>
+
+  <div class="d-flex flex-column align-items-start mb-5"> 
+    <p><%= @gallery.description %></p>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-start">
+    <% @artworks.order('created_at DESC').each do |artwork|%>
+      <div class="album-container d-flex flex-column flex-lg-row border border-dark rounded mt-3 me-3">
+        <div class="my-3 mx-3">
+          <h6><b><%= artwork.title %></b></h6>
+          <div class="row">
+            <% if artwork.image.attached? %>
+              <%= image_tag artwork.image.variant(:medium), class: ""  %>
+            <% end %>
+          </div>
+          <p><%= truncate artwork.artist %></p>
+          <p><%= truncate artwork.date %></p>
+          <p class="d-flex flex-row justify-content-end">
+            <%= link_to 'More', artwork_path(artwork), class: "link-style" %>
+          </p> 
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

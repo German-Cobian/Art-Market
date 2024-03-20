@@ -1,0 +1,26 @@
+<div class="mt-5 mx-5">
+  <h3>Galleries</h3>
+</div>
+
+<div class="my-5 mx-5">
+  <div class="d-flex flex-wrap justify-content-between" >
+    <% @galleries.each do |gallery| %>
+      <div class="album-container border border-danger rounded mt-3 me-3 py-4 px-3">
+        <div class="d-flex flex-row justify-content-end">
+          <%= link_to ">>", gallery_path(gallery.id), class: 'link-style' %>
+        </div>
+        <div>
+          <h6 class="mt-3"><%= gallery.topic %></h6>
+        </div>
+        <div class="row">
+          <% if gallery.image.attached? %>
+            <%= image_tag gallery.image.variant(:medium), class: ""  %>
+          <% end %>
+        </div>
+        <div class="my-3 mx-2">
+          <small><%= truncate gallery.description, lenght: 150 %></small>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   end
 
   root "home#index"
+
+  # Regular user routes
+
+  resources :galleries, only: [:index, :show]
+  resources :artworks, only: [:show]
 end
