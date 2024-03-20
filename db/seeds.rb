@@ -23,9 +23,23 @@ Artwork.create(
   country: 'Spanish',
 	style: 'surrealism',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien faucibus. Tellus pellentesque eu tincidunt tortor aliquam nulla. Eros in cursus turpis massa tincidunt dui ut. Hac habitasse platea dictumst vestibulum rhoncus est. Pretium fusce id velit ut tortor pretium. Vitae tempus quam pellentesque nec. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Amet risus nullam eget felis eget. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tristique senectus et netus et malesuada. Leo vel orci porta non pulvinar neque.',
-  price: 34557627372823,
+  price: 34557627,
   gallery_id: 1,
 ).image.attach(io: File.open('app/assets/images/dali.jpeg'), filename: 'dali.jpeg')
+
+Artwork.create(
+  title: 'Desastres Metafisicos', 
+  artist: 'Salvador Matta',
+  artwork_type: 'painting',
+  medium: 'oil on canvas',
+  dimensions: '90 x 70 cm',
+  date: '1948',
+  country: 'Chilean',
+	style: 'surrealism',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien faucibus. Tellus pellentesque eu tincidunt tortor aliquam nulla. Eros in cursus turpis massa tincidunt dui ut. Hac habitasse platea dictumst vestibulum rhoncus est. Pretium fusce id velit ut tortor pretium. Vitae tempus quam pellentesque nec. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Amet risus nullam eget felis eget. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tristique senectus et netus et malesuada. Leo vel orci porta non pulvinar neque.',
+  price: 95657627,
+  gallery_id: 1,
+).image.attach(io: File.open('app/assets/images/matta.jpeg'), filename: 'matta.jpeg')
 
 Artwork.create(
   title: 'Woman Playing a Mandolin', 
@@ -37,7 +51,7 @@ Artwork.create(
   country: 'Spanish',
 	style: 'cubism',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien faucibus. Tellus pellentesque eu tincidunt tortor aliquam nulla. Eros in cursus turpis massa tincidunt dui ut. Hac habitasse platea dictumst vestibulum rhoncus est. Pretium fusce id velit ut tortor pretium. Vitae tempus quam pellentesque nec. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Amet risus nullam eget felis eget. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tristique senectus et netus et malesuada. Leo vel orci porta non pulvinar neque.',
-    price: 90457627372823,
+    price: 90457627,
   gallery_id: 2,
 ).image.attach(io: File.open('app/assets/images/picasso.jpeg'), filename: 'picasso.jpeg')
 
@@ -51,6 +65,6 @@ Artwork.create(
   country: 'Russian',
 	style: 'abstract',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien faucibus. Tellus pellentesque eu tincidunt tortor aliquam nulla. Eros in cursus turpis massa tincidunt dui ut. Hac habitasse platea dictumst vestibulum rhoncus est. Pretium fusce id velit ut tortor pretium. Vitae tempus quam pellentesque nec. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Amet risus nullam eget felis eget. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tristique senectus et netus et malesuada. Leo vel orci porta non pulvinar neque.',
-  price: 76557627372823,
+  price: 76557627,
   gallery_id: 3,
 ).image.attach(io: File.open('app/assets/images/kandinsky.jpeg'), filename: 'kandinsky.jpeg')
