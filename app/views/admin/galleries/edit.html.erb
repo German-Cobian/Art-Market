@@ -29,6 +29,11 @@
       <%= form.text_area :description, size: "100x4", class: "form-control form-control-sm" %>
     </div>
 
+    <div class="mb-3">
+      <b><%= form.label "Imagene:", class: "form-label" %></b><br />
+      <%= form.file_field :image, class: "form-control form-control-sm" %>
+    </div>
+
     <div class="d-flex flex-row justify-content-end mt-3">
       <%= form.submit "Edit this Gallery", class: 'btn btn-outline-primary py-0' %>
     </div>

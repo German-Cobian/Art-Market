@@ -67,6 +67,6 @@ class Admin::GalleriesController < AdminController
 
     # Only allow a list of trusted parameters through.
     def admin_gallery_params
-      params.require(:gallery).permit(:topic, :description)
+      params.require(:gallery).permit(:topic, :description, :image)
     end
 end

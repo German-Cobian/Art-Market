@@ -65,6 +65,6 @@ class Admin::ArtworksController < AdminController
 
     # Only allow a list of trusted parameters through.
     def admin_artwork_params
-      params.require(:artwork).permit(:title, :description, :artist, :artwork_type, :medium, :dimensions, :date, :country, :style, :price, :gallery_id)
+      params.require(:artwork).permit(:title, :description, :artist, :artwork_type, :medium, :dimensions, :date, :country, :style, :price, :gallery_id, :image)
     end
 end

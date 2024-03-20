@@ -19,6 +19,11 @@
     </div>
 
     <div class="mb-3">
+      <b><%= form.label "Image:", class: "form-label" %></b><br />
+      <%= form.file_field :image, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
       <b><%= form.label "Title:", class: "form-label" %></b><br />
       <%= form.text_field :title, class: "form-control form-control-sm" %>
     </div>
@@ -28,44 +33,53 @@
       <%= form.text_area :description, size: "100x4", class: "form-control form-control-sm" %>
     </div>
 
-    <div class="mb-3">
-      <b><%= form.label "Artist:", class: "form-label" %></b><br />
-      <%= form.text_field :artist, class: "form-control form-control-sm" %>
+    <div class="d-flex flex-row mb-3">
+      <div class="me-3">
+        <b><%= form.label "Artist:", class: "form-label" %></b><br />
+        <%= form.text_field :artist, class: "form-control form-control-sm" %>
+      </div>
+
+      <div>
+        <b><%= form.label "Artwork Type:", class: "form-label" %></b><br />
+        <%= form.text_field :artwork_type, class: "form-control form-control-sm" %>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <b><%= form.label "Artwork Type:", class: "form-label" %></b><br />
-      <%= form.text_field :artwork_type, class: "form-control form-control-sm" %>
+    <div class="d-flex flex-row mb-3">
+      <div class="me-3">
+        <b><%= form.label "Medium:", class: "form-label" %></b><br />
+        <%= form.text_field :medium, class: "form-control form-control-sm" %>
+      </div>
+
+      <div>
+        <b><%= form.label "Dimensions:", class: "form-label" %></b><br />
+        <%= form.text_field :dimensions, class: "form-control form-control-sm" %>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <b><%= form.label "Medium:", class: "form-label" %></b><br />
-      <%= form.text_field :medium, class: "form-control form-control-sm" %>
+    <div class="d-flex flex-row mb-3">
+      <div class="me-3">
+        <b><%= form.label "Date:", class: "form-label" %></b><br />
+        <%= form.text_field :date, class: "form-control form-control-sm" %>
+      </div>
+
+      <div>
+        <b><%= form.label "Country:", class: "form-label" %></b><br />
+        <%= form.text_field :country, class: "form-control form-control-sm" %>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <b><%= form.label "Dimensions:", class: "form-label" %></b><br />
-      <%= form.text_field :dimensions, class: "form-control form-control-sm" %>
-    </div>
+    <div class="d-flex flex-row mb-3">
+      <div class="me-3">
+        <b><%= form.label "Style:", class: "form-label" %></b><br />
+        <%= form.text_field :style, class: "form-control form-control-sm" %>
+      </div>
 
-    <div class="mb-3">
-      <b><%= form.label "Date:", class: "form-label" %></b><br />
-      <%= form.text_field :date, class: "form-control form-control-sm" %>
-    </div>
-
-    <div class="mb-3">
-      <b><%= form.label "Country:", class: "form-label" %></b><br />
-      <%= form.text_field :country, class: "form-control form-control-sm" %>
-    </div>
-
-    <div class="mb-3">
-      <b><%= form.label "Style:", class: "form-label" %></b><br />
-      <%= form.text_field :style, class: "form-control form-control-sm" %>
-    </div>
-
-    <div class="mb-3">
+      <div>
       <b><%= form.label "Price:", class: "form-label" %></b><br />
       <%= form.number_field :price, class: "form-control form-control-sm" %>
+    </div>
+      
     </div>
 
     <div class="d-flex flex-row justify-content-end mt-3">
