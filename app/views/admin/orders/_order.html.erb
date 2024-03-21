@@ -25,9 +25,9 @@
   </p>
 
   <% if order.order_artworks.any? %>
-  <strong>Products:</strong>
+  <strong>Artworks:</strong>
   <% order.order_artworks.each do |op| %>
-    <%= op.product.name %> 
+    <%= op.artwork.title %> 
     <%= op.quantity %>
   <% end %>
 <% end %>
