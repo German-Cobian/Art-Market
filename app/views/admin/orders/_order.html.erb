@@ -24,4 +24,12 @@
     <%= order.fulfilled %>
   </p>
 
+  <% if order.order_artworks.any? %>
+  <strong>Products:</strong>
+  <% order.order_artworks.each do |op| %>
+    <%= op.product.name %> 
+    <%= op.quantity %>
+  <% end %>
+<% end %>
+
 </div>

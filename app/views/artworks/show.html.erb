@@ -1,6 +1,6 @@
 <div class="border border-dark rounded mt-3 mx-5 py-5 px-5">
  
-    <div class="d-flex flex-column justify-content-start mb-5">
+    <div data-controller="artworks" data-artworks-artwork-value="<%= @artwork.to_json %>" class="d-flex flex-column justify-content-start mb-5">
       <div class="d-flex flex-column align-items-center">
         <p><strong class="fSz-lg"><%= @artwork.title %></strong></p>
       
@@ -29,7 +29,7 @@
         <div class="d-flex flex-row justify-content-start">
           <strong class="me-3">Price:</strong>$<%= @artwork.price %>
         </div>
-    
+        <button data-action="click->artworks#addToCart" class="btn btn-outline-primary py-0">Add To Cart</button>
     </div>
 </div>
 

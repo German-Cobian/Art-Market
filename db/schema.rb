@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_21_183332) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_21_202531) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -78,6 +78,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_21_183332) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "order_artworks", force: :cascade do |t|
+    t.bigint "artwork_id", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artwork_id"], name: "index_order_artworks_on_artwork_id"
+    t.index ["order_id"], name: "index_order_artworks_on_order_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "customer_name"
     t.string "customer_email"
@@ -91,4 +100,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_21_183332) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "artworks", "galleries"
+  add_foreign_key "order_artworks", "artworks"
+  add_foreign_key "order_artworks", "orders"
 end
