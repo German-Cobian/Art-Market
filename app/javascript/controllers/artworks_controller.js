@@ -13,7 +13,7 @@ export default class extends Controller {
 
     if (cart) {
       const cartArray = JSON.parse(cart)
-      const foundIndex = cartArray.findIndex(item => item.id === this.atworkValue.id)
+      const foundIndex = cartArray.findIndex(item => item.id === this.artworkValue.id)
       if (foundIndex >= 0) {
         cartArray[foundIndex].quantity = parseInt(cartArray[foundIndex].quantity) + 1
       } else {

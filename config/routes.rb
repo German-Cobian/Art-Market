@@ -20,4 +20,6 @@ Rails.application.routes.draw do
 
   resources :galleries, only: [:index, :show]
   resources :artworks, only: [:show]
+
+  get "cart" => "carts#show"
 end
