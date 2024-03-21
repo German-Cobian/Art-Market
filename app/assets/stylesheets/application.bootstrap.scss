@@ -3,6 +3,15 @@
 @import 'admin';
 @import 'admin_navbar';
 
+.swiper {
+  width: 300px;
+  height: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
 .link-style {
   text-decoration: none;
 }
