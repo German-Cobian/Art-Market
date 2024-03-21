@@ -1,0 +1,51 @@
+<%= form_with(model: [:admin, admin_order]) do |form| %>
+  <% if admin_order.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(admin_order.errors.count, "error") %> prohibited this admin_order from being saved:</h2>
+
+      <ul>
+        <% admin_order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="border border-danger rounded mx-5 py-5 px-5">
+
+    <div class="mb-3">
+      <%= form.label :customer_name, class: "form-label" %>
+      <%= form.text_field :customer_name, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :customer_email, class: "form-label" %>
+      <%= form.text_field :customer_email, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :customer_address, class: "form-label" %>
+      <%= form.text_field :customer_address, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :total, class: "form-label" %>
+      <%= form.number_field :total, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :fulfilled, style: "display: block" %>
+      <%= form.check_box :fulfilled %>
+    </div>
+
+    <div class="d-flex flex-row justify-content-end mt-3">
+      <%= form.submit class: 'btn btn-outline-primary py-0' %>
+    </div>
+
+  </div>
+<% end %>
+
+
+
+   
+  

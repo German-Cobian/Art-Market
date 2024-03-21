@@ -1,0 +1,13 @@
+<div class="mt-3 ms-5">
+  <%= link_to "<<", admin_orders_path, class: 'link-style' %>
+</div>
+
+<h1 class="mt-3 ms-5">Edit this Order</h1>
+
+<%= render "form", admin_order: @admin_order %>
+
+<br>
+
+<div class="mt-3 mb-5 ms-5">
+  <%= link_to "Show this order", admin_order_path(@admin_order.id), class: 'link-style' %>
+</div>
