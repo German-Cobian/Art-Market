@@ -6,9 +6,6 @@ export default class extends Controller {
   static values = { artwork: Object }
 
   addToCart() {
-    console.log("artwork:", this.artworkValue) 
-  
-    console.log("artwork", this.artworkValue)
     const cart = localStorage.getItem("cart")
 
     if (cart) {

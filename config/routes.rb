@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   resources :artworks, only: [:show]
 
   get "cart" => "carts#show"
+  post "checkout" => "checkouts#create"
 end

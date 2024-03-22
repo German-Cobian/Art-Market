@@ -6,8 +6,4 @@ class Artwork < ApplicationRecord
     attachable.variant :large, resize_to_limit: [400, 400]
     attachable.variant :medium, resize_to_limit: [200, 200]
   end
-
-  def image_large
-    image.variant(resize_to_limit: [300, 300]).processed
-  end
 end
