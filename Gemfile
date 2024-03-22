@@ -76,3 +76,6 @@ end
 
 # Authentication gem
 gem "devise", "~> 4.9"
+
+# Payment processing
+gem "stripe", "~> 10.8"
