@@ -81,6 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_21_202531) do
   create_table "order_artworks", force: :cascade do |t|
     t.bigint "artwork_id", null: false
     t.bigint "order_id", null: false
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artwork_id"], name: "index_order_artworks_on_artwork_id"

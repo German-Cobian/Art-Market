@@ -1,7 +1,6 @@
 class CheckoutsController < ApplicationController
 
   def create
-    puts "Hit create"
     stripe_secret_key = Rails.application.credentials.dig(:stripe, :secret_key)
     Stripe.api_key = stripe_secret_key
     cart = params[:cart]
@@ -33,5 +32,13 @@ class CheckoutsController < ApplicationController
       }
     )
     render json: { url: session.url }
+  end
+
+  def success
+    render :success
+  end
+
+  def cancel
+    render :cancel
   end
 end
